@@ -2,7 +2,7 @@
 
 You are entering the GuluAI AI-native working system.
 
-This public repository is the universal entry and exchange layer for GuluAI humans, AI agents, and authorized external reviewers. A zero-context agent should start here before assuming anything about GuluAI memory, access, or current project state.
+This public repository is the **company-wide** universal entry, exchange, and work-relay layer for GuluAI humans, AI agents, and authorized external reviewers. It is not owned by or limited to PMO, R&D, EDU, or any single function, program, project, or AI worker. A zero-context agent should start here before assuming anything about GuluAI memory, access, or current project state.
 
 This repository is public. Treat everything here as permanently visible to the world.
 
@@ -18,7 +18,7 @@ Use it to:
 - exchange public-safe work products;
 - create handoffs when private canonical write access is unavailable;
 - mark public-safe memory candidates for later reconciliation;
-- preserve traceability between public exchange work and canonical memory.
+- preserve traceability between public exchange work and canonical memory;\n- relay bounded work between AI agents with minimal Human copy/paste. See [`WORK-RELAY.md`](WORK-RELAY.md).
 
 ## 2. What This Repository Is Not
 
@@ -183,7 +183,7 @@ Exchange status values:
 
 Remember: public exchange status does not equal canonical status.
 
-## 9. Reconciliation Model
+## 8.1 Company-Wide AI Work Relay\n\nThis Exchange is also the default durable AI-to-AI work relay across GuluAI company levels. PMO is one user, not the owner.\n\nWhen a coordinating AI cannot complete an authorized task, the default fallback order is **Codex first, OpenCode second**, unless another worker is clearly more appropriate. Create a short durable handoff under `handoffs/`; the worker reads this START-HERE and the handoff, executes, and writes the detailed result back to the Exchange. The Human should normally carry only the task ID / activation instruction between agents.\n\nFull protocol: [`WORK-RELAY.md`](WORK-RELAY.md).\n\n## 9. Reconciliation Model
 
 Agents without canonical write access must not be blocked.
 
