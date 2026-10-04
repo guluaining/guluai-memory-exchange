@@ -183,7 +183,11 @@ Exchange status values:
 
 Remember: public exchange status does not equal canonical status.
 
-## 8.1 Company-Wide AI Work Relay\n\nThis Exchange is also the default durable AI-to-AI work relay across GuluAI company levels. PMO is one user, not the owner.\n\nWhen a coordinating AI cannot complete an authorized task, the default fallback order is **Codex first, OpenCode second**, unless another worker is clearly more appropriate. Create a short durable handoff under `handoffs/`; the worker reads this START-HERE and the handoff, executes, and writes the detailed result back to the Exchange. The Human should normally carry only the task ID / activation instruction between agents.\n\nFull protocol: [`WORK-RELAY.md`](WORK-RELAY.md).\n\n## 9. Reconciliation Model
+## 8.1 Company-Wide AI Work Relay\n\nThis Exchange is also the default durable AI-to-AI work relay across GuluAI company levels. PMO is one user, not the owner.\n\nWhen a coordinating AI cannot complete an authorized task, the default fallback order is **Codex first, OpenCode second**, unless another worker is clearly more appropriate. Create a short durable handoff under `handoffs/`; the worker reads this START-HERE and the handoff, executes, and writes the detailed result back to the Exchange. The Human should normally carry only the task ID / activation instruction between agents.\n\nFull protocol: [`WORK-RELAY.md`](WORK-RELAY.md).
+
+### Mobile-First / Chat-First operating experiment
+
+GuluAI is currently validating a company-wide **Mobile-First / Chat-First AI Work** model: Human starts from mobile + ChatGPT Chat; Chat executes directly when capable; otherwise it escalates to **ChatGPT Work or Codex** according to task type, then to **OpenCode / local engineering environment** when deeper/local execution is required. This is an experimental baseline, not a permanent rule. See [`MOBILE-FIRST-AI-WORK.md`](MOBILE-FIRST-AI-WORK.md).\n\n## 9. Reconciliation Model
 
 Agents without canonical write access must not be blocked.
 
